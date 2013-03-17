@@ -1,17 +1,19 @@
-# Object files
-*.o
-
-# Libraries
-*.lib
 *.a
-
-# Shared objects (inc. Windows DLLs)
+*.app
 *.dll
+*.dylib
+*.exe
+*.lib
+*.o
+*.out
 *.so
 *.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
+INSTALL
+Makefile.in
+aclocal.m4
+autom4te.cache
+configure
+libltdl
+src/Makefile.in
+src/curvecp/Makefile.in
+src/curvecp/libcurvecp/Makefile.in
