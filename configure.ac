@@ -154,6 +154,7 @@ AC_CHECK_FUNC(clock_gettime, , [AC_CHECK_LIB(rt, clock_gettime)])
 AC_SEARCH_LIBS(gethostbyname, [resolv nsl])
 AC_SEARCH_LIBS(recvfrom, [socket])
 AC_SEARCH_LIBS(sodium_version_string, [sodium])
+AC_CHECK_FUNC(sodium_version_string, , [AC_ERROR([libsodium not found])])
 
 dnl Switches.
 
