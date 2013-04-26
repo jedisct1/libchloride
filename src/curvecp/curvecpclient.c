@@ -241,6 +241,8 @@ int main(int argc,char **argv)
   if (!hexparse(serverextension,16,*++argv)) die_usage("ext must be exactly 32 hex characters");
   if (!*++argv) die_usage("missing prog");
 
+  sodium_init();
+
   for (;;) {
     r = open_read("/dev/null");
     if (r == -1) die_fatal("unable to open /dev/null",0,0);

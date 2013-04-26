@@ -43,6 +43,8 @@ int main(int argc,char **argv)
   if (chdir(d) == -1) die_fatal("unable to chdir to directory",d,0);
   if (mkdir(".expertsonly",0700) == -1) die_fatal("unable to create directory",d,".expertsonly");
 
+  sodium_init();
+
   crypto_box_keypair(pk,sk);
   create(d,"publickey",pk,sizeof pk);
 
