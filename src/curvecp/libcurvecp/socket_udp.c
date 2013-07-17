@@ -6,6 +6,10 @@
 #include "socket.h"
 #include "blocking.h"
 
+#if !defined(SOL_IP) && defined(IPPROTO_IP)
+#define SOL_IP IPPROTO_IP
+#endif
+
 static void enable_bsd_fragmentation(int fd)
 {
 #ifdef IP_DONTFRAG
